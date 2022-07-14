@@ -31,7 +31,7 @@ def appearance(intervals):
             if intervals['tutor'][t] > intervals['pupil'][p] and \
                 intervals['tutor'][t] < intervals['pupil'][p + 1] and \
                 intervals['tutor'][t + 1] > intervals['pupil'][p] and \
-                intervals['tutor'][t + 1] == intervals['pupil'][p + 1]:
+                intervals['tutor'][t + 1] <= intervals['pupil'][p + 1]:
                 answer += intervals['tutor'][t + 1] - intervals['tutor'][t]
 
     return answer
